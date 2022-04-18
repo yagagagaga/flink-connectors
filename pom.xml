@@ -76,6 +76,7 @@ under the License.
 			<modules>
 				<module>flink-sql-connector-hbase-1.4</module>
 				<module>flink-sql-connector-hbase-2.2</module>
+				<module>flink-sql-connector-redis</module>
 			</modules>
 		</profile>
 	</profiles>
