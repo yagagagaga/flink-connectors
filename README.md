@@ -8,4 +8,5 @@ This project includes some improved connectors and some new connectors.
 
 ## New Connectors
 
+- flink-connector-stdio: a connector for standard input/output stream, it useful to program test in local.
 - flink-connector-redis
