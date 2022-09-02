@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
@@ -15,6 +15,10 @@
 	<artifactId>flink-connector-stdio_${scala.binary.version}</artifactId>
 	<name>Flink : Connectors : StdIO</name>
 	<packaging>jar</packaging>
+
+	<properties>
+		<jline.version>3.19.0</jline.version>
+	</properties>
 
 	<dependencies>
 
@@ -70,9 +74,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-common</artifactId>
-			<scope>provided</scope>
+			<groupId>org.jline</groupId>
+			<artifactId>jline</artifactId>
+			<version>${jline.version}</version>
 		</dependency>
 
 		<!-- test dependencies -->

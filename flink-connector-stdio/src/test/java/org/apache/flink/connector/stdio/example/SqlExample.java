@@ -17,8 +17,8 @@ public class SqlExample {
 				+ "  name STRING,\n"
 				+ "  age  INT\n"
 				+ ") WITH (\n"
-				+ "  'connector' = 'std.io',\n"
-				+ "  'format' = 'csv'\n"
+				+ "  'connector.type' = 'std.io',\n"
+				+ "  'format.type' = 'csv'\n"
 				+ ")");
 		tableEnv.executeSql(""
 				+ "CREATE TABLE t_output (\n"
@@ -26,8 +26,8 @@ public class SqlExample {
 				+ "  name STRING,\n"
 				+ "  age  INT\n"
 				+ ") WITH (\n"
-				+ "  'connector' = 'std.io',\n"
-				+ "  'format' = 'csv'\n"
+				+ "  'connector.type' = 'std.io',\n"
+				+ "  'format.type' = 'csv'\n"
 				+ ")");
 		tableEnv.executeSql("INSERT INTO t_output SELECT * FROM t_input");
 	}
