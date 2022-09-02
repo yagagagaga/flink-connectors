@@ -30,7 +30,7 @@ public class StdIOTableSource implements ScanTableSource {
 	@Override
 	public ScanRuntimeProvider getScanRuntimeProvider(ScanContext runtimeProviderContext) {
 		DeserializationSchema<RowData> deserializationSchema = decodingFormat.createRuntimeDecoder(runtimeProviderContext, producedDataType);
-		return SourceFunctionProvider.of(new StdIOSourceFunction(deserializationSchema), false);
+		return SourceFunctionProvider.of(new StdIOSourceFunction<>(deserializationSchema), false);
 	}
 
 	@Override

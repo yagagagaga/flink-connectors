@@ -25,8 +25,9 @@ public class StdIOSourceFunction<T> implements SourceFunction<T> {
 
 	@Override
 	public void run(SourceContext<T> sourceContext) throws Exception {
-		try (Terminal terminal = TerminalBuilder.terminal()) {
-			PrintWriter printWriter = terminal.writer();
+		try (Terminal terminal = TerminalBuilder.terminal();
+			 PrintWriter printWriter = terminal.writer()
+		) {
 			printWriter.println("======== ready to receive data, type `exit` or `bye` to end stream ========");
 			printWriter.flush();
 			LineReader lineReader = LineReaderBuilder.builder().terminal(terminal).build();
